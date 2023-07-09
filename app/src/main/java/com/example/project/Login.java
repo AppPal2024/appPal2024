@@ -22,14 +22,18 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        TextView textView = findViewById(R.id.createAccountTxt);
+        TextView createAccountTextView = findViewById(R.id.createAccountTxt);
+        TextView forgotPasswordTextView = findViewById(R.id.forgotPasswordTxt);
 
-        String text = "Never been here before? Create account.";
-        SpannableString ss = new SpannableString(text);
-        ClickableSpan clickableSpan = new ClickableSpan() {
+        String createAccountText = "Never been here before? Create Account";
+        String forgotPasswordText = "Forgot Password?";
+
+        SpannableString createAccountSpannable = new SpannableString(createAccountText);
+        SpannableString forgotPasswordSpannable = new SpannableString(forgotPasswordText);
+
+        ClickableSpan createAccountSpan = new ClickableSpan() {
             @Override
             public void onClick(View view) {
-                // Handle the click event to navigate to the activity_register.xml
                 Intent intent = new Intent(Login.this, Register.class);
                 startActivity(intent);
             }
@@ -37,17 +41,32 @@ public class Login extends AppCompatActivity {
             @Override
             public void updateDrawState(TextPaint ds) {
                 super.updateDrawState(ds);
-                // Customize the appearance of the clickable text (e.g., underline, color)
-                ds.setUnderlineText(true);
+                ds.setUnderlineText(false);
                 ds.setColor(Color.BLUE);
             }
         };
 
-// Set the clickable span for the "Create account" text
-        ss.setSpan(clickableSpan, text.indexOf("Create account"), text.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ClickableSpan forgotPasswordSpan = new ClickableSpan() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Login.this, ForgotPassword.class);
+                startActivity(intent);
+            }
 
-// Set the SpannableString to the TextView
-        textView.setText(ss);
-        textView.setMovementMethod(LinkMovementMethod.getInstance());
+            @Override
+            public void updateDrawState(TextPaint ds) {
+                super.updateDrawState(ds);
+                ds.setUnderlineText(false);
+                ds.setColor(Color.BLUE);
+            }
+        };
 
+        createAccountSpannable.setSpan(createAccountSpan, createAccountText.indexOf("Create Account"), createAccountText.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        forgotPasswordSpannable.setSpan(forgotPasswordSpan, 0, forgotPasswordText.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        createAccountTextView.setText(createAccountSpannable);
+        forgotPasswordTextView.setText(forgotPasswordSpannable);
+
+        createAccountTextView.setMovementMethod(LinkMovementMethod.getInstance());
+        forgotPasswordTextView.setMovementMethod(LinkMovementMethod.getInstance());
     }}
