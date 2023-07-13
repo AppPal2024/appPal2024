@@ -4,104 +4,193 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CFD5D6"
+    android:background="@drawable/background_login"
     tools:context=".Login">
+
+    <TextView
+        android:id="@+id/logintitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Sign In"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="171dp" />
 
     <TextView
         android:id="@+id/Email_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="236dp"
-        android:clickable="false"
+        android:layout_marginTop="90dp"
         android:text="Username or Email "
-        android:textColor="@android:color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/EmailTxt"
-        android:layout_width="281dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/edit_text_rounded_bg"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:padding="8dp"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.015"
-        app:layout_constraintStart_toStartOf="@+id/Email_label"
-        app:layout_constraintTop_toTopOf="@+id/Email_label" />
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/logintitle" />
 
     <TextView
         android:id="@+id/Password_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:text="Password "
-        android:textColor="@android:color/black"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/EmailTxt" />
 
     <EditText
         android:id="@+id/PswrdTxt"
-        android:layout_width="277dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/edit_text_rounded_bg"
         android:ems="10"
         android:inputType="textPassword"
         android:padding="8dp"
-        android:textColor="#000000"
+        android:scaleType="centerCrop"
+        android:textColor="#FFFFFF"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintDimensionRatio="5.5:1"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="@id/guideline"
         app:layout_constraintTop_toTopOf="@+id/Password_label" />
 
     <TextView
         android:id="@+id/forgotPasswordTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:text="Forgot Password?"
-        android:textColor="@android:color/black"
+        android:textColor="#F3FCFF"
+        android:textStyle="bold"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/PswrdTxt"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/PswrdTxt"
         app:layout_constraintTop_toBottomOf="@+id/PswrdTxt" />
 
-
     <Button
         android:id="@+id/Login"
-        android:layout_width="333dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="48dp"
-        android:background="#ffffff"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rounded_corners"
         android:text="Login"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:cornerRadius="25dp"
-        app:layout_constraintEnd_toEndOf="@+id/PswrdTxt"
-        app:layout_constraintHorizontal_bias="0.464"
-        app:layout_constraintStart_toStartOf="@+id/PswrdTxt"
+        app:backgroundTint="#EDF0E9"
+        app:layout_constraintDimensionRatio="2.5:1"
+        app:layout_constraintEnd_toEndOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.446"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/forgotPasswordTxt" />
 
     <TextView
         android:id="@+id/createAccountTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:text="Never been here before? Create Account"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/Login"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="@+id/Login"
         app:layout_constraintTop_toBottomOf="@+id/Login" />
+
+    <EditText
+        android:id="@+id/EmailTxt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/edit_text_rounded_bg"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="8dp"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintDimensionRatio="5.5:1"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintHorizontal_bias="0.015"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/Email_label" />
+
+    <TextView
+        android:id="@+id/signUsing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:text="Or sign in using"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@id/guideline3"
+        app:layout_constraintEnd_toEndOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/createAccountTxt" />
+
+    <LinearLayout
+        android:id="@+id/socialicons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/signUsing">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/facebook_icon" />
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/google_icon" />
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/twiiter_icon" />
+
+
+    </LinearLayout>
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

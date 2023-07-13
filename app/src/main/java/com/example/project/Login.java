@@ -42,7 +42,7 @@ public class Login extends AppCompatActivity {
             public void updateDrawState(TextPaint ds) {
                 super.updateDrawState(ds);
                 ds.setUnderlineText(false);
-                ds.setColor(Color.BLUE);
+                ds.setColor(Color.WHITE);
             }
         };
 
@@ -57,7 +57,7 @@ public class Login extends AppCompatActivity {
             public void updateDrawState(TextPaint ds) {
                 super.updateDrawState(ds);
                 ds.setUnderlineText(false);
-                ds.setColor(Color.BLUE);
+                ds.setColor(Color.WHITE);
             }
         };
 

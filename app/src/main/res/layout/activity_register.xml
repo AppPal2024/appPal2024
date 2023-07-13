@@ -4,163 +4,244 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CFD5D6"
+    android:background="@drawable/background_signup"
     tools:context=".Register">
 
 
-        <TextView
-            android:id="@+id/Fname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="52dp"
-            android:layout_marginTop="56dp"
-            android:text="First Name"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/signuptitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Sign Up"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="171dp" />
+
+    <TextView
+        android:id="@+id/Fname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:text="First Name"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/signuptitle" />
 
     <EditText
         android:id="@+id/FnameTxt"
-        android:layout_width="281dp"
-        android:layout_height="48dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="22dp"
         android:background="@drawable/edit_text_rounded_bg"
         android:ems="10"
         android:inputType="textPersonName"
         android:padding="8dp"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="#FFFFFF"
+        app:layout_constraintDimensionRatio="6:1"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintHorizontal_bias="0.066"
-        app:layout_constraintStart_toStartOf="@+id/Fname"
         app:layout_constraintTop_toTopOf="@+id/Fname" />
 
     <TextView
             android:id="@+id/Lname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="52dp"
             android:layout_marginTop="12dp"
             android:text="Last Name"
-            app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/FnameTxt" />
 
     <EditText
         android:id="@+id/LnameTxt"
-        android:layout_width="281dp"
-        android:layout_height="48dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="22dp"
         android:background="@drawable/edit_text_rounded_bg"
         android:ems="10"
         android:inputType="textPersonName"
         android:padding="8dp"
-        app:layout_constraintEnd_toEndOf="@+id/FnameTxt"
+        android:textColor="#FFFFFF"
+        app:layout_constraintDimensionRatio="6:1"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/FnameTxt"
         app:layout_constraintTop_toTopOf="@+id/Lname" />
 
     <TextView
             android:id="@+id/Email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="52dp"
         android:layout_marginTop="12dp"
             android:text="Email"
-            app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/LnameTxt" />
 
     <EditText
         android:id="@+id/EmailTxt"
-        android:layout_width="281dp"
-        android:layout_height="48dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="22dp"
         android:background="@drawable/edit_text_rounded_bg"
         android:ems="10"
         android:inputType="textPersonName"
         android:padding="8dp"
-        app:layout_constraintEnd_toEndOf="@+id/FnameTxt"
+        android:textColor="#FFFFFF"
+
+        app:layout_constraintDimensionRatio="6:1"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/FnameTxt"
         app:layout_constraintTop_toTopOf="@+id/Email" />
 
     <TextView
-        android:id="@+id/Cemail"
+        android:id="@+id/Pswrd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="12dp"
-        android:text="Confirm Email"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="Password"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/EmailTxt" />
-
-    <EditText
-        android:id="@+id/CemailTxt"
-        android:layout_width="281dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="22dp"
-        android:background="@drawable/edit_text_rounded_bg"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:padding="8dp"
-        app:layout_constraintEnd_toEndOf="@+id/FnameTxt"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/FnameTxt"
-        app:layout_constraintTop_toTopOf="@+id/Cemail" />
-
-    <TextView
-            android:id="@+id/Pswrd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="52dp"
-            android:layout_marginTop="12dp"
-            android:text="Password"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/CemailTxt" />
 
         <EditText
             android:id="@+id/PswrdTxt"
-            android:layout_width="281dp"
-            android:layout_height="48dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:layout_marginTop="22dp"
             android:background="@drawable/edit_text_rounded_bg"
             android:padding="8dp"
             android:ems="10"
             android:inputType="textPassword"
-            app:layout_constraintEnd_toEndOf="@+id/FnameTxt"
+            android:textColor="#FFFFFF"
+            app:layout_constraintDimensionRatio="6:1"
+            app:layout_constraintEnd_toEndOf="@id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="@+id/FnameTxt"
             app:layout_constraintTop_toTopOf="@+id/Pswrd" />
 
     <TextView
             android:id="@+id/Cpswrd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="52dp"
             android:layout_marginTop="12dp"
             android:text="Confirm Password"
-            app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/PswrdTxt" />
 
     <EditText
         android:id="@+id/CpswrdTxt"
-        android:layout_width="281dp"
-        android:layout_height="48dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="22dp"
         android:background="@drawable/edit_text_rounded_bg"
         android:padding="8dp"
         android:ems="10"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="@+id/FnameTxt"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/FnameTxt"
+        android:textColor="#FFFFFF"
+        app:layout_constraintDimensionRatio="6:1"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/Cpswrd" />
 
     <Button
         android:id="@+id/Register"
-        android:layout_width="169dp"
-        android:layout_height="51dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="42dp"
+        android:background="@drawable/rounded_corners"
         android:text="Register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="#EDF0E9"
+        app:layout_constraintDimensionRatio="2.5:1"
+        app:layout_constraintEnd_toEndOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.446"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/CpswrdTxt" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <TextView
+        android:id="@+id/signUsing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="60dp"
+        android:text="Or sign up using"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@id/guideline3"
+        app:layout_constraintEnd_toEndOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/Register" />
+
+    <LinearLayout
+        android:id="@+id/socialicons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/signUsing">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/facebook_icon" />
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/google_icon" />
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/twiiter_icon" />
+
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
