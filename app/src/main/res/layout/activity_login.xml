@@ -125,13 +125,13 @@
         android:id="@+id/signUsing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="130dp"
+        android:layout_marginBottom="14dp"
         android:text="Or sign in using"
         android:textStyle="bold"
         android:textColor="#000000"
         app:layout_constraintStart_toStartOf="@id/guideline3"
         app:layout_constraintEnd_toEndOf="@id/guideline4"
-        app:layout_constraintTop_toBottomOf="@+id/createAccountTxt" />
+        app:layout_constraintBottom_toTopOf="@id/socialicons" />
 
     <LinearLayout
         android:id="@+id/socialicons"
@@ -139,7 +139,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@+id/signUsing">
+        app:layout_constraintTop_toBottomOf="@+id/guideline5"
+        app:layout_constraintBottom_toTopOf="@id/guideline6">
 
         <ImageView
             android:layout_width="48dp"
@@ -192,5 +193,18 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.65" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.81" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
